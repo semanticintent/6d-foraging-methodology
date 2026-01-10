@@ -8,14 +8,14 @@ This document describes how the 6D Foraging Methodology is archived for academic
 
 This repository is archived on Zenodo for long-term preservation and academic citation.
 
-**Status:** 🟡 Pending initial registration (v1.0.0)
+**Status:** ✅ Archived
 
 **Archive Details:**
 - **Title:** 6D Foraging Methodology: Strategic Dimensional Discovery
 - **Version:** 1.0.0
 - **Date:** 2026-01-10
 - **License:** CC BY 4.0
-- **DOI:** Will be assigned upon registration
+- **DOI:** [10.5281/zenodo.18209946](https://doi.org/10.5281/zenodo.18209946)
 
 ---
 
@@ -114,9 +114,9 @@ See [README.md](README.md#citation) for citation formats, or use the metadata in
 ### Version History
 
 Each version archived on Zenodo gets its own DOI:
-- **v1.0.0:** Initial release (2026-01-10) - DOI: Pending
+- **v1.0.0:** Initial release (2026-01-10) - DOI: [10.5281/zenodo.18209946](https://doi.org/10.5281/zenodo.18209946)
 
-Concept DOI (always points to latest version): Will be assigned
+Concept DOI (always points to latest version): 10.5281/zenodo.18209946
 
 ### Contributing to Archived Work
 

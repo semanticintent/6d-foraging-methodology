@@ -1,6 +1,7 @@
 # 6D Foraging Methodology™
 ## Strategic Dimensional Discovery
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18209946.svg)](https://doi.org/10.5281/zenodo.18209946)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![GitHub](https://img.shields.io/badge/GitHub-semanticintent%2F6d--foraging--methodology-blue)](https://github.com/semanticintent/6d-foraging-methodology)
 
@@ -215,7 +216,7 @@ If you use or reference 6D Foraging Methodology in your work, please cite:
 
 ### APA Style
 
-Shatny, M. (2026). 6D Foraging Methodology: Strategic Dimensional Discovery. GitHub. https://github.com/semanticintent/6d-foraging-methodology
+Shatny, M. (2026). 6D Foraging Methodology: Strategic Dimensional Discovery. Zenodo. https://doi.org/10.5281/zenodo.18209946
 
 ### BibTeX
 
@@ -224,8 +225,9 @@ Shatny, M. (2026). 6D Foraging Methodology: Strategic Dimensional Discovery. Git
   author = {Shatny, Michael},
   title = {6D Foraging Methodology: Strategic Dimensional Discovery},
   year = {2026},
-  publisher = {GitHub},
+  publisher = {Zenodo},
   url = {https://github.com/semanticintent/6d-foraging-methodology},
+  doi = {10.5281/zenodo.18209946},
   note = {ORCID: 0009-0006-2011-3258}
 }
 ```
