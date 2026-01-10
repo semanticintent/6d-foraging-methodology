@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "6D Foraging Methodology: Strategic Dimensional Discovery"
+message: "If you use this methodology, please cite it using the metadata from this file."
+type: software
+authors:
+  - family-names: Shatny
+    given-names: Michael
+    orcid: "https://orcid.org/0009-0006-2011-3258"
+repository-code: "https://github.com/semanticintent/6d-foraging-methodology"
+url: "https://6d.cormorantforaging.dev"
+abstract: >-
+  The 6D Foraging Methodology is a strategic analysis framework 
+  that maps how problems cascade across six business dimensions 
+  (Customer, Employee, Revenue, Regulatory, Quality, Operational). 
+  Using a 3D scoring lens (Sound/Space/Time), it reveals cost 
+  multipliers of 2-11× that traditional analysis misses.
+keywords:
+  - strategic analysis
+  - cascade analysis
+  - cost multiplier
+  - business dimensions
+  - risk assessment
+  - 6D methodology
+  - foraging methodology
+license: CC-BY-4.0
+version: 1.0.0
+date-released: "2026-01-10"
+references:
+  - type: software
+    title: "PACE: Pattern for Agentic Conversational Experience"
+    authors:
+      - family-names: Shatny
+        given-names: Michael
+    doi: "10.5281/zenodo.18049371"
+    url: "https://github.com/semanticintent/pace-pattern"
