@@ -12,10 +12,12 @@ This repository is archived on Zenodo for long-term preservation and academic ci
 
 **Archive Details:**
 - **Title:** 6D Foraging Methodology: Strategic Dimensional Discovery
-- **Version:** 1.0.0
-- **Date:** 2026-01-10
+- **Concept DOI (all versions):** [10.5281/zenodo.18209945](https://doi.org/10.5281/zenodo.18209945)
+- **Latest version:** 2.0.0 (2026-11-09)
+- **Version 1.0.0:** 2026-01-10, [10.5281/zenodo.18209946](https://doi.org/10.5281/zenodo.18209946)
 - **License:** CC BY 4.0
-- **DOI:** [10.5281/zenodo.18209946](https://doi.org/10.5281/zenodo.18209946)
+
+Releases are created from GitHub; Zenodo archives each one automatically under the concept DOI.
 
 ---
 
@@ -58,8 +60,8 @@ When submitting to Zenodo, use these details:
 | **Creators** | Michael Shatny (ORCID: 0009-0006-2011-3258) |
 | **Description** | Use abstract from README.md |
 | **License** | Creative Commons Attribution 4.0 International |
-| **Keywords** | strategic analysis, cascade analysis, cost multiplier, business dimensions, risk assessment, 6D methodology, foraging methodology |
-| **Version** | 1.0.0 |
+| **Keywords** | strategic analysis, cascade analysis, business dimensions, risk assessment, 6D methodology, foraging methodology, CAL |
+| **Version** | 2.0.0 |
 
 ### Related Identifiers
 

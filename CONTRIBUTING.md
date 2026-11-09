@@ -12,11 +12,11 @@ Share your application of the methodology:
 
 - **Industry:** What sector?
 - **Origin:** What was the visible problem?
-- **Cascade:** How did it propagate?
-- **Multiplier:** What was the hidden cost ratio?
+- **Cascade:** How did it propagate? Write it in cascade notation (e.g. `D2 > D3+D6 > D1`).
+- **Evidence:** A cited source for each step, and a 0-100 score for each dimension it reached.
 - **Learnings:** What patterns did you observe?
 
-Submit case studies via pull request to the `cases/` directory.
+Open an issue with the case, or link to where it is published.
 
 ### 2. Pattern Documentation
 
@@ -72,10 +72,10 @@ Major methodology changes require discussion:
 
 ### For Case Studies
 
-1. Use the case study template (see `cases/TEMPLATE.md`)
+1. Use the template in [docs/applications/cascade-analysis.md](docs/applications/cascade-analysis.md)
 2. Anonymize sensitive information
-3. Include quantified results where possible
-4. Submit via pull request
+3. Cite a source for every number you use
+4. Open an issue or pull request
 
 ---
 

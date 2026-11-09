@@ -1,262 +1,60 @@
 # 6D Foraging Methodology™
 ## Strategic Dimensional Discovery
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18209946.svg)](https://doi.org/10.5281/zenodo.18209946)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18209945.svg)](https://doi.org/10.5281/zenodo.18209945)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![GitHub](https://img.shields.io/badge/GitHub-semanticintent%2F6d--foraging--methodology-blue)](https://github.com/semanticintent/6d-foraging-methodology)
 
-**A strategic analysis framework for discovering cost multipliers others miss.**
+**A method for tracing how one event spreads across six dimensions of an organization or sector, with every step tied to cited evidence.**
 
-> *"Diving deep across six dimensions to discover the 70-90% traditional analysis leaves behind."*
-
----
-
-## Abstract
-
-The **6D Foraging Methodology™** is a strategic analysis framework that maps how problems cascade across six business dimensions. Like cormorants diving beneath the surface for fish, this methodology forages deep to find hidden costs that traditional analysis misses.
-
-Most organizations see only 10-30% of their true problem costs. The visible issue—a layoff, a system failure, a market shift—is just the surface. Beneath it lies a cascade of consequences across Customer, Employee, Revenue, Regulatory, Quality, and Operational dimensions.
-
-The 6D framework quantifies this cascade, revealing multipliers of 2-11× between visible costs and total impact.
-
-**Author:** Michael Shatny  
-**ORCID:** [0009-0006-2011-3258](https://orcid.org/0009-0006-2011-3258)  
-**Date:** January 2026  
-**License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
-**Trademark:** 6D Foraging Methodology™
+**Version 2.0.0** · November 2026 · Website: [6d.semanticintent.dev](https://6d.semanticintent.dev)
 
 ---
 
-## The Problem This Solves
+## What it is
 
-Traditional business analysis tends to:
+An event rarely stays in one place. A layoff reaches quality, quality reaches customers, customers reach revenue. The 6D Foraging Methodology describes how to trace that movement:
 
-- Focus on the visible, immediate problem
-- Stop at the first-order effects
-- Miss cascading consequences across departments
-- Underestimate total cost by 70-90%
+- **Six dimensions:** D1 Customer, D2 Employee, D3 Revenue, D4 Regulatory, D5 Quality, D6 Operational. Each dimension a case reaches is scored 0 to 100 from cited evidence. Not every case reaches all six.
+- **The cascade:** where the event started (the origin) and the layers it moved through, written in a short notation such as `D5 > D2+D6 > D4+D1`.
+- **Four kinds of case:** diagnostic (something broke), amplifying (something is working), at risk (a weakness inside success), prognostic (a prediction with named triggers and a review date).
+- **The verdict:** the analyst's written reading of the cascade, for example EXECUTE, MONITOR, WATCH or COUNTER.
+- **The review loop:** prognostic cases are reopened on their review date and graded, including the ones that did not hold.
 
-```
-Traditional Analysis:
-┌─────────────────────────────────────┐
-│  Problem: Layoffs announced         │
-│  Cost: $300K severance              │
-│  Analysis: Complete ✓               │
-└─────────────────────────────────────┘
+Scoring is defined by **CAL**, the Cascade Analysis Language, not by this repository: Chirp (the average of the scored dimensions), DRIFT (|Methodology − Performance|), Confidence (the analyst's 0–1 rating of evidence quality), and FETCH = Chirp × DRIFT × Confidence, compared with a threshold to give a level (EXECUTE, CONFIRM, QUEUE or WAIT). See the [CAL specification](https://cal.semanticintent.dev) ([10.5281/zenodo.18905196](https://doi.org/10.5281/zenodo.18905196)). The computed level and the written verdict are different things and can disagree.
 
-6D Foraging Analysis:
-┌─────────────────────────────────────┐
-│  Visible Cost: $300K                │
-│         ↓                           │
-│  Employee cascade: $525K-1.05M      │
-│  Revenue cascade: $900K-1.4M        │
-│  Quality cascade: $300K-550K        │
-│  Customer cascade: $250K-500K       │
-│         ↓                           │
-│  Total Impact: $2.1M-3.4M           │
-│  Multiplier: 7-11×                  │
-└─────────────────────────────────────┘
+## Evidence
+
+The method is applied in a public library of case studies at [uc-000.stratiqx.com](https://uc-000.stratiqx.com). [`data/counted-patterns.md`](data/counted-patterns.md) counts what those cases recorded: which dimension each cascade started in, what the next layer included, and where cascades ended. For example, Regulatory lands in the last layer in 158 of 331 cascades, more than any other dimension. These are counts, not probabilities. Regenerate them with:
+
+```bash
+python3 scripts/count_patterns.py
 ```
 
----
+## Contents
 
-## The Six Dimensions
+| Folder | What is in it |
+|---|---|
+| [`docs/`](docs/) | The methodology, a snapshot of [6d.semanticintent.dev](https://6d.semanticintent.dev): [getting started](docs/getting-started.md), the [framework](docs/framework/index.md), each [dimension](docs/dimensions/customer.md), [scoring](docs/framework/scoring.md), [cascade pathways](docs/framework/cascade-pathways.md), applications and reference pages |
+| [`data/`](data/) | Counted cascade patterns from the published cases |
+| [`scripts/`](scripts/) | `count_patterns.py` (regenerates the counts) and `snapshot_from_site.py` (copies the website's pages into `docs/` for a release) |
 
-| Dimension | Symbol | What It Measures |
-|-----------|--------|------------------|
-| **Customer** | 👤 | Trust erosion, churn signals, lifetime value loss |
-| **Employee** | 👥 | Turnover risk, burnout, knowledge concentration |
-| **Revenue** | 💰 | Payment delays, contract penalties, opportunity loss |
-| **Regulatory** | ⚖️ | Compliance gaps, audit findings, legal exposure |
-| **Quality** | ✨ | Defect rates, rework cycles, safety incidents |
-| **Operational** | ⚙️ | Schedule delays, resource waste, system downtime |
+The website is the working copy; each release of this repository is a snapshot of it.
 
-Each dimension is analyzed for:
-- **Observable signals** — Concrete, measurable indicators
-- **Cascade depth** — How far the effects propagate (L1, L2, L3)
-- **Cost quantification** — Dollar ranges based on evidence
+## What changed in 2.0.0
 
----
-
-## The 3D Lens (Scoring System)
-
-Each dimension is scored using three lenses, inspired by cormorant foraging behavior:
-
-| Lens | Name | What It Measures | Range |
-|------|------|------------------|-------|
-| **Sound** | ChirpIQX | Urgency — How immediate is the signal? | 1-10 |
-| **Space** | PerchIQX | Scope — How widespread is the impact? | 1-10 |
-| **Time** | WakeIQX | Trajectory — Is it improving or degrading? | 1-10 |
-
-### Scoring Formula
-
-```
-Dimension Score = (Sound × Space × Time) ÷ 10
-
-Example:
-- Sound (Urgency): 7
-- Space (Scope): 8  
-- Time (Trajectory): 6
-- Score: (7 × 8 × 6) ÷ 10 = 33.6
-```
-
-Scores range from 0.1 (minimal concern) to 100 (critical across all lenses).
-
----
-
-## Cascade Mapping
-
-Problems don't stay isolated—they multiply. The 6D framework maps cascade depth:
-
-```
-L0: Origin
- └── L1: First-order effects (direct consequences)
-      └── L2: Second-order effects (downstream impact)
-           └── L3: Third-order effects (systemic ripples)
-```
-
-### Example: Tailwind CSS Case Study
-
-**Visible Event:** AI coding assistants bypass documentation → Revenue down 80%
-
-| Dimension | Level | Observable Signal | Cascade Cost |
-|-----------|-------|-------------------|--------------|
-| Operational (Origin) | L0 | AI bypass breaks funnel | ~$300K |
-| Employee | L1 | 75% layoff, knowledge loss | $525K-1.05M |
-| Revenue | L1 | Lifetime license = no recurring | $900K-1.4M |
-| Quality | L1 | Skeleton crew for 75M downloads | $300K-550K |
-| Customer | L2 | Community trust damaged | $250K-500K |
-
-**Total Cascade:** $2.1M-3.4M
-**Multiplier:** 7-11×
-**Dimensions Affected:** 5 of 6
-
-[Full case study →](cases/tailwind-css.md)
-
----
-
-## Quick Start
-
-### 1. Identify the Origin
-
-What's the visible problem? This becomes your Operational (L0) starting point.
-
-### 2. Score Each Dimension
-
-For each of the 6 dimensions, assess:
-- What signals are you observing?
-- Score Sound/Space/Time (1-10 each)
-- Calculate dimension score
-
-### 3. Map the Cascade
-
-- What are the first-order effects (L1)?
-- What downstream effects follow (L2, L3)?
-- Which dimensions are affected?
-
-### 4. Quantify Costs
-
-For each affected dimension, estimate cost ranges based on:
-- Industry benchmarks
-- Historical data
-- Comparable situations
-
-### 5. Calculate the Multiplier
-
-```
-Multiplier = Total Cascade Cost ÷ Visible Cost
-```
-
----
-
-## Repository Structure
-
-```
-6d-foraging-methodology/
-├── README.md                 # This file - framework overview
-├── DIMENSIONS.md             # Deep dive on each dimension
-├── 3D-LENS.md                # Scoring system details
-├── SCORING.md                # Formulas and calculations
-├── CASCADE-MAPPING.md        # How to map cascade effects
-├── EXAMPLES.md               # Case studies and applications
-├── QUICK-REFERENCE.md        # Cheat sheet for practitioners
-├── CITATION.cff              # Machine-readable citation metadata
-├── CHANGELOG.md              # Version history
-├── CONTRIBUTING.md           # How to contribute
-├── LICENSE                   # CC BY 4.0 license
-└── cases/
-    ├── tailwind-css.md       # Tailwind Labs case study
-    └── aviation-mro.md       # Aviation maintenance case study
-```
-
----
-
-## Connection to Ecosystem
-
-6D Foraging Methodology is part of the **Cormorant Foraging** ecosystem:
-
-```
-Cormorant Foraging (Philosophy)
-├── 6D Foraging Methodology (Analysis Framework) ← You are here
-│   └── StratIQX (Implementation Platform)
-└── PACE Pattern (UX Framework)
-    └── MillPond (Implementation Platform)
-```
-
-**Related Projects:**
-- [StratIQX](https://stratiqx.ai) — AI-powered strategic analysis platform
-- [PACE Pattern](https://github.com/semanticintent/pace-pattern) — Conversational UX framework (DOI: 10.5281/zenodo.18049371)
-- [Semantic Intent](https://semanticintent.dev) — Philosophy layer
-
----
+Version 1.0.0 (January 2026) taught a cost multiplier ("2–11× hidden costs"), cascade probabilities and a fictional worked example. None of these were used by, or supported by, the published cases, and the counted patterns contradict the probabilities. Version 2.0.0 removes them and describes the method the cases actually use. Details in [CHANGELOG.md](CHANGELOG.md). Version 1.0.0 remains available at [10.5281/zenodo.18209946](https://doi.org/10.5281/zenodo.18209946) and under the `v1.0.0` tag.
 
 ## Citation
 
-If you use or reference 6D Foraging Methodology in your work, please cite:
+Cite the concept DOI to refer to the methodology, or a version DOI for a specific release. See [CITATION.cff](CITATION.cff).
 
-### APA Style
+> Shatny, M. (2026). *6D Foraging Methodology: Strategic Dimensional Discovery* (Version 2.0.0). Zenodo. https://doi.org/10.5281/zenodo.18209945
 
-Shatny, M. (2026). 6D Foraging Methodology: Strategic Dimensional Discovery. Zenodo. https://doi.org/10.5281/zenodo.18209946
+**Author:** Michael Shatny · ORCID [0009-0006-2011-3258](https://orcid.org/0009-0006-2011-3258)
+**License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · **Trademark:** 6D Foraging Methodology™
 
-### BibTeX
+## Related
 
-```bibtex
-@misc{shatny20266d,
-  author = {Shatny, Michael},
-  title = {6D Foraging Methodology: Strategic Dimensional Discovery},
-  year = {2026},
-  publisher = {Zenodo},
-  url = {https://github.com/semanticintent/6d-foraging-methodology},
-  doi = {10.5281/zenodo.18209946},
-  note = {ORCID: 0009-0006-2011-3258}
-}
-```
-
----
-
-## License
-
-This work is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
-
-You are free to:
-- **Share** — copy and redistribute in any medium or format
-- **Adapt** — remix, transform, and build upon for any purpose
-
-Under the following terms:
-- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
-
-**6D Foraging Methodology™** is a trademark of Michael Shatny.
-
----
-
-## Author
-
-**Michael Shatny**  
-Ontario, Canada  
-ORCID: [0009-0006-2011-3258](https://orcid.org/0009-0006-2011-3258)
-
-Part of the [Cormorant Foraging](https://cormorantforaging.dev) ecosystem.
-
----
-
-*"Most analysis stops at the visible cost. They miss the cascade. Now you can see it."* 🐦
+- CAL specification: [cal.semanticintent.dev](https://cal.semanticintent.dev) · [10.5281/zenodo.18905196](https://doi.org/10.5281/zenodo.18905196)
+- CAL runtime: [`@stratiqx/cal-runtime`](https://www.npmjs.com/package/@stratiqx/cal-runtime) · [10.5281/zenodo.18905192](https://doi.org/10.5281/zenodo.18905192)
+- Case library: [stratiqx.com](https://stratiqx.com)

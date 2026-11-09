@@ -7,25 +7,27 @@ authors:
     given-names: Michael
     orcid: "https://orcid.org/0009-0006-2011-3258"
 repository-code: "https://github.com/semanticintent/6d-foraging-methodology"
-url: "https://6d.cormorantforaging.dev"
-doi: "10.5281/zenodo.18209946"
+url: "https://6d.semanticintent.dev"
+doi: "10.5281/zenodo.18209945"
 abstract: >-
-  The 6D Foraging Methodology is a strategic analysis framework 
-  that maps how problems cascade across six business dimensions 
-  (Customer, Employee, Revenue, Regulatory, Quality, Operational). 
-  Using a 3D scoring lens (Sound/Space/Time), it reveals cost 
-  multipliers of 2-11× that traditional analysis misses.
+  The 6D Foraging Methodology is a method for tracing how one event
+  spreads across six dimensions of an organization or sector (Customer,
+  Employee, Revenue, Regulatory, Quality, Operational), with each dimension
+  scored 0-100 from cited evidence and the cascade recorded from its origin
+  through each layer. Scoring is defined by the CAL specification. Version
+  2.0.0 removes the cost multiplier and cascade probabilities of version
+  1.0.0 and adds counted cascade patterns from a public library of
+  published case studies.
 keywords:
   - strategic analysis
   - cascade analysis
-  - cost multiplier
   - business dimensions
   - risk assessment
   - 6D methodology
   - foraging methodology
 license: CC-BY-4.0
-version: 1.0.0
-date-released: "2026-01-10"
+version: 2.0.0
+date-released: "2026-11-09"
 references:
   - type: software
     title: "PACE: Pattern for Agentic Conversational Experience"
@@ -34,3 +36,10 @@ references:
         given-names: Michael
     doi: "10.5281/zenodo.18049371"
     url: "https://github.com/semanticintent/pace-pattern"
+  - type: software
+    title: "CAL Language Specification: Cormorant Agentic Language Documentation"
+    authors:
+      - family-names: Shatny
+        given-names: Michael
+    doi: "10.5281/zenodo.18905196"
+    url: "https://cal.semanticintent.dev"
