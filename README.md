@@ -6,7 +6,7 @@
 
 **A method for tracing how one event spreads across six dimensions of an organization or sector, with every step tied to cited evidence.**
 
-**Version 2.0.0** · November 2026 · Website: [6d.semanticintent.dev](https://6d.semanticintent.dev)
+**Version 2.1.0** · November 2026 · Website: [6d.semanticintent.dev](https://6d.semanticintent.dev)
 
 ---
 
@@ -39,6 +39,10 @@ python3 scripts/count_patterns.py
 | [`scripts/`](scripts/) | `count_patterns.py` (regenerates the counts) and `snapshot_from_site.py` (copies the website's pages into `docs/` for a release) |
 
 The website is the working copy; each release of this repository is a snapshot of it.
+
+## What changed in 2.1.0
+
+Optional **benchmarks** replace the retired multiplier with cited ratios computed by CAL: the BEA output multiplier for a case's industry, published ratios for specific kinds of events, and measured final ÷ first costs at review. Each is shown on its own with its source and scope, and never added to another. See [docs/framework/scoring.md](docs/framework/scoring.md) and [CHANGELOG.md](CHANGELOG.md).
 
 ## What changed in 2.0.0
 
