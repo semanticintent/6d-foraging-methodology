@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.0] - 2026-11-10
+
+### Added
+
+- **Benchmarks (optional).** Cited ratios, computed by CAL ([spec v1.3.0](https://cal.semanticintent.dev/language/benchmarks), runtime 1.7.0), in place of the retired cost multiplier:
+  - **Sector:** the U.S. Bureau of Economic Analysis output multiplier for the case's industry (1997–2023, 15 sectors and 71 industries).
+  - **Event:** a published ratio for one kind of event, checked at its primary source (OSHA; Armour, Mayer & Polo 2017; Karpoff, Lee & Martin 2008; Jarrell & Peltzman 1985; Hallegatte 2008; IBM/Ponemon 2025; Boushey & Glynn 2012).
+  - **Measured:** final cost ÷ first reported cost, at a case's review.
+- Rules: inputs only, a lookup not a judgement, never added together, share-price ratios never added to costs, no match means nothing shown. Widely repeated but untraceable figures are listed and excluded.
+- First live benchmark: UC-317 (aerospace manufacturing, 2.12×).
+
 ## [2.0.0] - 2026-11-09
 
 The methodology now describes what the published cases actually do. This is a major version because the cost multiplier and cascade probabilities are removed.

@@ -26,8 +26,8 @@ keywords:
   - 6D methodology
   - foraging methodology
 license: CC-BY-4.0
-version: 2.0.0
-date-released: "2026-11-09"
+version: 2.1.0
+date-released: "2026-11-10"
 references:
   - type: software
     title: "PACE: Pattern for Agentic Conversational Experience"

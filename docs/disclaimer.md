@@ -89,7 +89,7 @@ Our framework uses:
 - **CAL scoring** ([spec v1.2.0](https://doi.org/10.5281/zenodo.24090152)): Chirp, DRIFT, Confidence and FETCH against a threshold
 - **Counted patterns** from the published case library (counts of what earlier cases recorded, not probabilities)
 
-The framework does **not** use cost multipliers, "total impact" dollar estimates, or cascade probabilities. Earlier versions did; those numbers were invented and have been removed.
+The framework does **not** use estimated cost multipliers, "total impact" dollar estimates, or cascade probabilities. Earlier versions did; those numbers were invented and have been removed. From v2.1 a case may show optional **benchmarks**: ratios taken from a cited published source (or, for the sector tier, from the U.S. Bureau of Economic Analysis) and computed by CAL. Each applies only within the scope of its source and is never added to another.
 
 These are:
 - **Judgment-based**, not deterministic

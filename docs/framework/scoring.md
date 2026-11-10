@@ -212,6 +212,26 @@ FETCH = 76.5 × 40 × 0.86 = 2,632
 
 Against a **THRESHOLD of 1,000**, 2,632 is above 2T (2,000), so CAL's level is **EXECUTE, high priority**, and the case's written verdict is **EXECUTE, High Priority** too. The level is what the formula on the case's own page computes, cited to eight sources and [independently checkable](https://uc-246.stratiqx.com). The verdict happens to agree here. It does not always, as UC-335 shows.
 
+## Benchmarks (optional, 6D v2.1)
+
+6D v1 printed a cost multiplier on every case. It was retired in v2.0 because cases almost never had sourced costs on both sides, so the number was estimated or copied. Published research does support ratios for **one kind of event in one field**, and for **how far demand spreads through an industry's supply chain**. Benchmarks bring those back, cited and computed by CAL ([spec v1.3.0, Benchmarks](https://cal.semanticintent.dev/language/benchmarks)).
+
+| Tier | Fits | Value |
+|---|---|---|
+| **Sector** | A case about U.S. activity in one industry | The U.S. Bureau of Economic Analysis output multiplier for that industry: total U.S. output needed, directly and through suppliers, per $1 of final demand (e.g. motor vehicles 2.83, construction 1.90, housing 1.17; 2023) |
+| **Event** | A case about one incident at one firm | A published ratio for that event type, such as a share-price loss of about 9× a regulatory fine for misconduct harming customers or investors (Armour, Mayer & Polo 2017) |
+| **Measured** | A case at review | Final cost ÷ first reported cost, both sourced |
+
+The rules keep benchmarks honest:
+
+- The case gives inputs only (an industry code, an event type, a sourced cost). CAL looks up the value; nobody picks a ratio to suit the story.
+- Each benchmark is shown on its own, with its source and scope. They are never added together into one multiplier.
+- Share-price ratios are never added to cost ratios.
+- A ratio applies only where its source studied: the same kind of event, firms, place and period.
+- If nothing fits, nothing is shown. Most cases have no benchmark, and that is fine.
+
+The registry also lists figures that are widely repeated but untraceable, and excludes them: Heinrich's 4:1 accident ratio, Bird's iceberg, "6–9 months of salary" per departure, "a new customer costs 5–25× more than keeping one", the 1:10:100 defect rule and "$5,600 per minute" of downtime. The first live benchmark is on [UC-317](https://uc-317.stratiqx.com): Boeing's engineers, aerospace manufacturing, 2.12×.
+
 ## Quick Reference Scoring Guide
 
 ### Rapid Assessment (30 seconds)
